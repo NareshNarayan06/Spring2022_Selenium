@@ -1,4 +1,4 @@
-package Selenium;
+package SeleniumHomeWorks;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +14,8 @@ public void launchAmAzOnWeb (){
     WebDriver driver = new ChromeDriver();
 
     driver.get("https://www.amazon.com/");
+
+    driver.close();
 
 }
 
