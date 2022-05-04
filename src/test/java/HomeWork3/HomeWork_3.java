@@ -45,8 +45,8 @@ public class HomeWork_3 {
         String tempValCStringRemovalDegree = tempValCInString.substring(0,tempValCInString.length()-1);
         double celsiusTempVal = Integer.parseInt(tempValCStringRemovalDegree);
 
-        double actualTempValInCUsingF =Math.round((fahrenheitTempVal-32)*5/9);
-        double actualTempValInFUsingC =  Math.round((celsiusTempVal * 9/5 )+ 32 );
+        double actualTempValInCUsingF = Math.round((fahrenheitTempVal-32)*5/9);
+        double actualTempValInFUsingC = Math.floor((celsiusTempVal * 9/5 )+ 32 );
 
         Assert.assertEquals(actualTempValInCUsingF,celsiusTempVal,"The conversion is incorrect");
         Assert.assertEquals(actualTempValInFUsingC,fahrenheitTempVal,"The conversion is incorrect");
@@ -77,7 +77,7 @@ public class HomeWork_3 {
 
         Assert.assertEquals(month,monthTextValue,"Current month is not present");
 
-        SimpleDateFormat sdFormatDay = new SimpleDateFormat("dd");
+        SimpleDateFormat sdFormatDay = new SimpleDateFormat("d");
         String day = sdFormatDay.format(now);
 
         By dayLocator = By.xpath("//select[@id='day']//option[@selected='1']");
