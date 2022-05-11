@@ -100,7 +100,7 @@ public class HomeWork_5 {
 
         Set<String> numOfWindowHandles = MyDriver.getDriver().getWindowHandles();
         int totalNumOfWindowHandles = numOfWindowHandles.size();
-        Assert.assertEquals(1,1,"Total number of window handles are more than 1 ");
+        Assert.assertEquals(totalNumOfWindowHandles,1,"Total number window handles are more than 1");
 
         WebElement logInElement = MyDriver.getDriver().findElement(By.xpath("//div[text()='Log In']"));
         boolean isItDisabled= logInElement.isSelected();
